@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnPath AI Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h2>🎓 LearnPath AI</h2>
+      <p>Smarter Learning. Better You.</p>
+      <nav>
+        <a class="active" href="#dashboard">⌂ Dashboard</a>
+        <a href="#courses">▤ My Courses</a>
+        <a href="#gaps">◎ Learning Gaps</a>
+        <a href="#plan">▣ Personalized Plan</a>
+        <a href="#practice">▧ Practice & Quizzes</a>
+        <a href="#progress">▥ Progress</a>
+        <a href="#resources">▱ Resources</a>
+        <a href="#settings">⚙ Settings</a>
+      </nav>
+      <div class="sidebar-tip">
+        🧠 AI detects your learning gaps, so you can focus on what matters.
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <button id="notifications">♧</button>
+        <div class="user">👤 Zakaria Mahfuz · Student</div>
+      </header>
+      <div class="dashboard" id="dashboard">
+        <section class="left">
+          <div class="welcome">
+            <h1>Hello, Zakaria! 👋</h1>
+            <p>Let's make your learning journey smarter with AI.</p>
+            <div class="goal">
+              🎯 <b>Your goal:</b>
+              Improve overall performance and master weak topics.
+            </div>
+          </div>
+          <section class="stats">
+            <article class="card">
+              <h4>Overall Progress</h4>
+              <h2>68%</h2>
+              <progress value="68" max="100"></progress>
+              <p>Completed 34 of 50 topics</p>
+            </article>
+            <article class="card">
+              <h4>Learning Gaps</h4>
+              <h2>6</h2>
+              <p>Topics need more practice</p>
+            </article>
+            <article class="card">
+              <h4>Study Streak</h4>
+              <h2>5 days</h2>
+              <p>Keep it up! 🔥</p>
+            </article>
+            <article class="card">
+              <h4>Time Spent</h4>
+              <h2>12h 30m</h2>
+              <p>↑ 25% vs last week</p>
+            </article>
+          </section>
+          <section class="card" id="gaps">
+            <h3>Your Learning Gaps</h3>
+            <p>AI has identified the topics you need to focus on.</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Subject</th>
+                  <th>Topic</th>
+                  <th>Proficiency</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mathematics</td>
+                  <td>Calculus (Limits & Continuity)</td>
+                  <td>42%</td>
+                  <td><button class="practice">Practice</button></td>
+                </tr>
+                <tr>
+                  <td>Physics</td>
+                  <td>Electricity & Magnetism</td>
+                  <td>58%</td>
+                  <td><button class="practice">Practice</button></td>
+                </tr>
+                <tr>
+                  <td>Computer Science</td>
+                  <td>Data Structures (Trees)</td>
+                  <td>61%</td>
+                  <td><button class="practice">Practice</button></td>
+                </tr>
+                <tr>
+                  <td>English</td>
+                  <td>Reading Comprehension</td>
+                  <td>45%</td>
+                  <td><button class="practice">Practice</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section class="card" id="progress">
+            <h3>Performance Overview</h3>
+            <p>Your subject-wise performance.</p>
+            <div class="chart">
+              <div><span>72%</span><div class="bar" style="height:72%"></div><small>Math</small></div>
+              <div><span>65%</span><div class="bar" style="height:65%"></div><small>Physics</small></div>
+              <div><span>78%</span><div class="bar" style="height:78%"></div><small>Computer Science</small></div>
+              <div><span>58%</span><div class="bar" style="height:58%"></div><small>English</small></div>
+            </div>
+          </section>
+        </section>
+        <aside class="right">
+          <section class="card" id="plan">
+            <h3>Your Personalized Learning Plan</h3>
+            <p>AI-generated based on your performance and learning gaps.</p>
+            <button class="plan-step">① Focus on Weak Topics <small>6 topics · 2h 30m</small></button>
+            <button class="plan-step">② Practice with Adaptive Quizzes <small>Daily · 30m</small></button>
+            <button class="plan-step">③ Review & Reinforce <small>3 topics · 1h 30m</small></button>
+            <button class="plan-step">④ Take a Mock Test <small>Weekly · 1h</small></button>
+            <button class="primary" id="fullPlan">View Full Plan →</button>
+          </section>
+          <section class="card" id="resources">
+            <h3>💡 AI Recommendations</h3>
+            <button class="recommendation">▶ Watch: Calculus Basics (Video)</button>
+            <button class="recommendation">▤ Practice Set: Electricity & Magnetism</button>
+            <button class="recommendation">▣ Read: Tree Traversal (Quick Guide)</button>
+          </section>
+          <section class="card motivation">
+            <h3>Small steps. Big progress.</h3>
+            <p>Your personalized learning path is ready. Keep going!</p>
+            <button class="primary" id="continue">Continue Learning →</button>
+          </section>
+        </aside>
+      </div>
+    </main>
+  </div>
+  <div id="message" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
