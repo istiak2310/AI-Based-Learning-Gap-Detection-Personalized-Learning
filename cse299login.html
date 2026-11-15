@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LearnPath AI – Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <div class="page">
+
+    <!-- Left brand panel -->
+    <aside class="brand">
+      <strong class="brand-logo">LearnPath AI</strong>
+      <h2 class="brand-title">Smarter learning.<br>Better you.</h2>
+      <p class="brand-text">AI finds the topics you struggle with and builds a plan to close the gaps.</p>
+      <p class="feature"><span class="check" aria-hidden="true">✓</span>Detects learning gaps and misconceptions</p>
+      <p class="feature"><span class="check" aria-hidden="true">✓</span>Adaptive quizzes that match your level</p>
+      <p class="feature"><span class="check" aria-hidden="true">✓</span>A personalized plan that updates as you improve</p>
+    </aside>
+
+    <!-- Right form panel -->
+    <main class="panel">
+      <section class="card">
+
+        <div class="tabs" role="tablist" aria-label="Login or register">
+          <button type="button" class="chip is-on" id="tab-login" role="tab" aria-selected="true" data-mode="login">Login</button>
+          <button type="button" class="chip" id="tab-register" role="tab" aria-selected="false" data-mode="register">Register</button>
+        </div>
+
+        <div>
+          <h1 id="form-title">Welcome back</h1>
+          <p class="muted" id="form-subtitle">Sign in to continue your learning path.</p>
+        </div>
+
+        <form id="auth-form" novalidate>
+          <div class="field register-only" hidden>
+            <label for="name">Full name</label>
+            <input class="input" id="name" name="name" type="text" autocomplete="name" placeholder="Your full name">
+            <p class="error" id="name-error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+            <p class="error" id="email-error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <input class="input" id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password">
+            <p class="error" id="password-error" role="alert"></p>
+          </div>
+
+          <div class="field register-only" hidden>
+            <label for="confirm">Confirm password</label>
+            <input class="input" id="confirm" name="confirm" type="password" autocomplete="new-password" placeholder="Re-enter your password">
+            <p class="error" id="confirm-error" role="alert"></p>
+          </div>
+
+          <div class="row between" id="login-extras">
+            <label class="check-label"><input type="checkbox" id="remember">Remember me</label>
+            <a href="#" class="link">Forgot password?</a>
+          </div>
+
+          <p class="form-error" id="form-error" role="alert"></p>
+
+          <button type="submit" class="btn" id="submit-btn">Sign in</button>
+        </form>
+
+        <p class="muted center">
+          <span id="switch-text">New to LearnPath AI?</span>
+          <a href="#" class="link" id="switch-link">Create an account</a>
+        </p>
+
+      </section>
+    </main>
+
+  </div>
+  <script src="js/login.js"></script>
+</body>
+</html>
