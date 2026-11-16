@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LearnPath AI – Practice &amp; Quizzes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/practice.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- Sidebar -->
+    <nav class="sidebar" aria-label="Main navigation">
+      <strong class="logo">LearnPath AI</strong>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="courses.html">My Courses</a>
+      <a href="gaps.html">Learning Gaps</a>
+      <a href="plan.html">Personalized Plan</a>
+      <a href="practice.html" class="active" aria-current="page">Practice &amp; Quizzes</a>
+      <a href="progress.html">Progress</a>
+      <a href="resources.html">Resources</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+
+    <main class="main">
+
+      <!-- Top bar -->
+      <header class="topbar">
+        <div>
+          <h1>Practice &amp; Quizzes</h1>
+          <p class="muted">Pick a topic and we’ll adapt the questions to your level.</p>
+        </div>
+        <div class="user">
+          <span class="avatar" id="avatar">Z</span>
+          <span id="user-name">Zakaria Mahfuz</span>
+        </div>
+      </header>
+
+      <div class="layout">
+
+        <!-- Quiz setup card -->
+        <section class="card setup">
+
+          <div>
+            <h2 class="label">1 · Subject</h2>
+            <div class="chips" data-group="subject">
+              <button type="button" class="chip is-on" data-value="Mathematics" aria-pressed="true">Mathematics</button>
+              <button type="button" class="chip" data-value="Physics" aria-pressed="false">Physics</button>
+              <button type="button" class="chip" data-value="English" aria-pressed="false">English</button>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="label">2 · Topic</h2>
+            <div class="topics" id="topic-list"></div>
+          </div>
+
+          <div>
+            <h2 class="label">3 · Difficulty</h2>
+            <div class="chips" data-group="difficulty">
+              <button type="button" class="chip" data-value="Easy" aria-pressed="false">Easy</button>
+              <button type="button" class="chip" data-value="Medium" aria-pressed="false">Medium</button>
+              <button type="button" class="chip" data-value="Hard" aria-pressed="false">Hard</button>
+              <button type="button" class="chip is-on" data-value="Adaptive" aria-pressed="true">Adaptive</button>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="label">4 · Questions</h2>
+            <div class="chips" data-group="questions">
+              <button type="button" class="chip" data-value="5" aria-pressed="false">5</button>
+              <button type="button" class="chip is-on" data-value="10" aria-pressed="true">10</button>
+              <button type="button" class="chip" data-value="15" aria-pressed="false">15</button>
+            </div>
+          </div>
+
+          <div class="footer">
+            <span class="muted" id="summary">About 12 minutes · answers are saved as you go</span>
+            <button type="button" class="btn" id="start-btn">Start quiz</button>
+          </div>
+        </section>
+
+        <!-- AI recommendation -->
+        <aside class="card recommend">
+          <span class="badge">AI recommendation</span>
+          <h2 id="rec-title">Start with Real Numbers</h2>
+          <p id="rec-text">Real Numbers &amp; Number System is your lowest topic at 42%. A 10-question adaptive quiz changes difficulty after every answer and shows which misconception caused each mistake.</p>
+          <button type="button" class="btn" id="rec-btn">Start recommended quiz</button>
+        </aside>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="js/practice.js"></script>
+</body>
+</html>
